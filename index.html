@@ -1281,13 +1281,17 @@
 </body>
 <script>
   function changeData() {
+    const json = JSON.parse(decodeURIComponent(window.location.search.replace('?', '')))
+    console.log(json['user_img']);
+    document.getElementById('temp_position').innerHTML = json['title'].replace('+', ' ');
+    document.getElementById('temp_company_image').src = json['user_img'];
     const params = window.location.search.split('/---/');
     let company_image = '';
     let image_v = '';
     let image_t = '';
     for (const param of params){
         if (param.includes('position=')){
-          document.getElementById('temp_position').innerHTML = unescape(param.split('position=')[1].replace(/\\n/g, ''));
+          document.getElementById('temp_position').innerHTML = json['title'];
         } else if (param.includes('company_image=')) {
           company_image = param.replace('company_image=', '');
         } else if (param.includes('image_v=')) {
@@ -1303,9 +1307,9 @@
         }
     }
     
-    const image = company_image + '&' + image_v + '&' + image_t.split('?random')[0];
-    document.getElementById('temp_company_image').src = image;
-    document.getElementById('temp_company_location').innerHTML = image;
+    // const image = company_image + '&' + image_v + '&' + image_t.split('?random')[0];
+    // document.getElementById('temp_company_image').src = image;
+    // document.getElementById('temp_company_location').innerHTML = image;
   }
 </script>
 
