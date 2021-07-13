@@ -1283,11 +1283,11 @@
   function changeData() {
     const json = JSON.parse(decodeURIComponent(window.location.search.replace('?', '')))
     console.log(json);
-    document.getElementById('temp_position').innerHTML = json['position'].replace('+', ' ');
+    document.getElementById('temp_position').innerHTML = json['position'];
     document.getElementById('temp_company_image').src = json['company_image'];
-    document.getElementById('temp_company_name').innerHTML = json['company_name'].replace('+', ' ');
-    document.getElementById('temp_company_location').innerHTML = json['company_location'].replace('+', ' ');
-    document.getElementById('temp_description').innerHTML = json['description'].replace('+', ' ');
+    document.getElementById('temp_company_name').innerHTML = json['company_name'];
+    document.getElementById('temp_company_location').innerHTML = json['company_location'];
+    document.getElementById('temp_description').innerHTML = json['description'];
 
     const params = window.location.search.split('/---/');
     let company_image = '';
