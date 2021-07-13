@@ -507,7 +507,7 @@
 
   <div class="p5">
     <a href="https://www.linkedin.com/company/barilla_group/life/" id="ember45" class="ember-view">
-      <img width="48" id="temp_company_image" height="48" id="ember46" class="ember-view EntityPhoto-square-3 mb3">
+      <img width="48" id="temp_company_image" height="48" id="ember46" class="ember-view EntityPhoto-square-3 mb3" onerror="this.src='https://static-exp1.licdn.com/sc/h/3dtfvv2esz58o2zimai1h3v2d';">
     </a>
     <h1 class="t-24 t-bold" id="temp_position">Software engineer</h1>
     <div class="mt2">
@@ -1302,9 +1302,9 @@
           document.getElementById('temp_company_location').innerHTML = unescape(param.split('location=')[1].replace(/\\n/g, ''));;
         }
     }
-    // onerror="this.src='https://static-exp1.licdn.com/sc/h/3dtfvv2esz58o2zimai1h3v2d';"
+    
     const image = company_image + '&' + image_v + '&' + image_t.split('?random')[0];
-    document.getElementById('temp_company_image').src = image;
+    document.getElementById('temp_company_image').src = image + 't=1';
     document.getElementById('temp_company_location').innerHTML = image;
   }
 </script>
