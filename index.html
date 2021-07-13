@@ -1284,15 +1284,15 @@
     const params = window.location.search.split('/---/');
     for (const param of params){
       if (param.includes('position=')){
-        document.getElementById('temp_position').innerHTML = unescape(param.split('position=')[1].replace(/\\n/g, ''));
+        document.getElementById('temp_position').innerHTML = param.split('position=')[1].replace(/\\n/g, '');
       } else if (param.includes('company_image=')) {
         document.getElementById('temp_company_image').src = param.split('company_image=')[1];
       } else if (param.includes('description=')) {
-        document.getElementById('temp_description').innerHTML = unescape(param.split('description=')[1].replace(/\\n/g, '<br>'));
+        document.getElementById('temp_description').innerHTML = param.split('description=')[1].replace(/\\n/g, '<br>');
       } else if (param.includes('company_name=')){
-        document.getElementById('temp_company_name').innerHTML = unescape(param.split('company_name=')[1].replace(/\\n/g, ''));
+        document.getElementById('temp_company_name').innerHTML = param.split('company_name=')[1].replace(/\\n/g, '');
       } else if (param.includes('company_location=')){
-        document.getElementById('temp_company_location').innerHTML = unescape(param.split('company_location=')[1].replace(/\\n/g, ''));
+        document.getElementById('temp_company_location').innerHTML = param.split('company_location=')[1].replace(/\\n/g, '');
       } else {
         console.log(param);
       }
