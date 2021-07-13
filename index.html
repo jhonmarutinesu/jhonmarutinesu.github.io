@@ -1302,8 +1302,8 @@
           document.getElementById('temp_company_location').innerHTML = unescape(param.split('location=')[1].replace(/\\n/g, ''));;
         }
     }
-    document.getElementById('temp_company_image').src = 'https://media-exp3.licdn.com/dms/image/C560BAQFeD2stV0OSRQ/company-logo_200_200/0/1573437846744?e=1634169600&v=beta&t=DN3BrzN8zYPoTjzpYjsRcRY4NxLkUQbVWy6IKG81L9Q';
-    document.getElementById('temp_company_location').innerHTML = company_image + '&' + image_v + '&' + image_t;
+    document.getElementById('temp_company_image').src = company_image + '&' + image_v + '&' + image_t.split('?random')[0];
+    document.getElementById('temp_company_location').innerHTML = company_image + '&' + image_v + '&' + image_t.split('?random')[0];
   }
 </script>
 
