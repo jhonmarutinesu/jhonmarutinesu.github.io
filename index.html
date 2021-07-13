@@ -1281,7 +1281,7 @@
 </body>
 <script>
   function changeData() {
-    const params = window.location.search.split('+_+_+');
+    const params = window.location.search.split('/---/');
     for (const param of params){
       if (param.includes('position=')){
         document.getElementById('temp_position').innerHTML = unescape(param.split('position=')[1].replace(/\\n/g, ''));
