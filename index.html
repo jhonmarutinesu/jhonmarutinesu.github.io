@@ -1281,6 +1281,7 @@
 </body>
 <script>
   function changeData() {
+    
     const json = JSON.parse(decodeURIComponent(window.location.search.replace('?', '')))
     console.log(json);
     document.getElementById('temp_position').innerHTML = json['position'];
@@ -1289,27 +1290,27 @@
     document.getElementById('temp_company_location').innerHTML = json['company_location'];
     document.getElementById('temp_description').innerHTML = json['description'];
 
-    const params = window.location.search.split('/---/');
-    let company_image = '';
-    let image_v = '';
-    let image_t = '';
-    for (const param of params){
-        if (param.includes('position=')){
-          document.getElementById('temp_position').innerHTML = json['title'];
-        } else if (param.includes('company_image=')) {
-          company_image = param.replace('company_image=', '');
-        } else if (param.includes('image_v=')) {
-          image_v = param.replace('image_v=', '');
-        } else if (param.includes('image_t=')) {
-          image_t = param.replace('image_t=', '');
-        } else if (param.includes('description=')) {
-          document.getElementById('temp_description').innerHTML = unescape(param.split('description=')[1].replace(/\\n/g, '<br>'));
-        } else if (param.includes('company_name=')){
-          document.getElementById('temp_company_name').innerHTML = unescape(param.split('company_name=')[1].replace(/\\n/g, ''));
-        } else if (param.includes('company_location=')){
-          document.getElementById('temp_company_location').innerHTML = unescape(param.split('location=')[1].replace(/\\n/g, ''));;
-        }
-    }
+    // const params = window.location.search.split('/---/');
+    // let company_image = '';
+    // let image_v = '';
+    // let image_t = '';
+    // for (const param of params){
+    //     if (param.includes('position=')){
+    //       document.getElementById('temp_position').innerHTML = json['title'];
+    //     } else if (param.includes('company_image=')) {
+    //       company_image = param.replace('company_image=', '');
+    //     } else if (param.includes('image_v=')) {
+    //       image_v = param.replace('image_v=', '');
+    //     } else if (param.includes('image_t=')) {
+    //       image_t = param.replace('image_t=', '');
+    //     } else if (param.includes('description=')) {
+    //       document.getElementById('temp_description').innerHTML = unescape(param.split('description=')[1].replace(/\\n/g, '<br>'));
+    //     } else if (param.includes('company_name=')){
+    //       document.getElementById('temp_company_name').innerHTML = unescape(param.split('company_name=')[1].replace(/\\n/g, ''));
+    //     } else if (param.includes('company_location=')){
+    //       document.getElementById('temp_company_location').innerHTML = unescape(param.split('location=')[1].replace(/\\n/g, ''));;
+    //     }
+    // }
     
     // const image = company_image + '&' + image_v + '&' + image_t.split('?random')[0];
     // document.getElementById('temp_company_image').src = image;
