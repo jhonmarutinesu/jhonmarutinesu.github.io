@@ -1282,9 +1282,9 @@
 <script>
   function changeData() {
     const json = JSON.parse(decodeURIComponent(window.location.search.replace('?', '')))
-    console.log(json['user_img']);
-    document.getElementById('temp_position').innerHTML = json['title'].replace('+', ' ');
-    document.getElementById('temp_company_image').src = json['user_img'];
+    console.log(json);
+    document.getElementById('temp_position').innerHTML = json['position'].replace('+', ' ');
+    document.getElementById('temp_company_image').src = json['company_image'];
     const params = window.location.search.split('/---/');
     let company_image = '';
     let image_v = '';
