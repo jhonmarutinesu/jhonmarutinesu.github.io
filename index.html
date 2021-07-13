@@ -1287,7 +1287,8 @@
     const company_name = urlParams.get('company_name')
     document.getElementById('temp_company_name').innerHTML = company_name
 
-    const company_image = urlParams.get('company_image')
+    // const company_image = urlParams.get('company_image')
+    const company_image = queryString.split('&company_image=')[1]
     document.getElementById('temp_company_image').src = company_image
 
     const position = urlParams.get('position')
@@ -1297,7 +1298,7 @@
     document.getElementById('temp_company_location').innerHTML = company_location
 
     const description = urlParams.get('description')
-    document.getElementById('temp_description').innerHTML = description
+    document.getElementById('temp_description').innerHTML = description.replace(/\\n/g, '<br>');
   }
 </script>
 
