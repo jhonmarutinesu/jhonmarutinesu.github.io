@@ -1292,8 +1292,10 @@
       } else if (param.includes('company_name=')){
         document.getElementById('temp_company_name').innerHTML = unescape(param.split('company_name=')[1].replace(/\\n/g, ''));
       } else if (param.includes('company_location=')){
-        document.getElementById('temp_company_location').innerHTML = params;
+        document.getElementById('temp_company_location').innerHTML = param.split('company_image')[1];
       }
+      document.getElementById('temp_company_location').innerHTML = param.split('company_image=')[1];
+        console.log(param);
     }
   }
 </script>
