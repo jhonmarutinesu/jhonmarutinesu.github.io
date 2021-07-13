@@ -1284,7 +1284,7 @@
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const company_location = urlParams.get('company_location');
-    document.getElementById('temp_company_location').innerHTML = company_location;
+    document.getElementById('temp_company_location').innerHTML = queryString;
 
     // const company_image = urlParams.get('company_image');
     const company_image = queryString.split('&company_image=')[1];
