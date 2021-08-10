@@ -957,17 +957,21 @@
 </body>
 <script>
   function changeData() {
-    
-    // const json = JSON.parse(decodeURIComponent(window.location.search.replace('?', '')))
-    // console.log(json);
-    // document.getElementById('temp_position').innerHTML = json['position'];
-    // document.getElementById('temp_company_location').innerHTML = json['company_location'];
-    document.getElementById('company_background').src = "https://www.barilla.com//-/media/images/en_gb/home-page/barillabagsofgoodness.jpg";
-    document.getElementById('company_image').src = "https://cf.geekdo-images.com/wDThpp59gDPAWTeLhNyJMg__original/img/k3p0wvbDC5TtSi4J4juRtRBwrCg=/0x0/filters:format(jpeg)/pic1086053.jpg";
-    document.getElementById('company_name').innerHTML = "Barilla";
-    document.getElementById('company_description').innerHTML = "Barilla is an Italian multinational food company. It is the world's largest pasta producer";
-    document.getElementById('company_followers').innerHTML = "9900";
-    document.getElementById('company_title').innerHTML = "Barilla, Company";
+    const json = JSON.parse(decodeURIComponent(window.location.search.replace('?', '')))
+    // document.getElementById('company_background').src = "https://www.barilla.com//-/media/images/en_gb/home-page/barillabagsofgoodness.jpg";
+    // document.getElementById('company_image').src = "https://cf.geekdo-images.com/wDThpp59gDPAWTeLhNyJMg__original/img/k3p0wvbDC5TtSi4J4juRtRBwrCg=/0x0/filters:format(jpeg)/pic1086053.jpg";
+    // document.getElementById('company_name').innerHTML = "Barilla";
+    // document.getElementById('company_description').innerHTML = "Barilla is an Italian multinational food company. It is the world's largest pasta producer";
+    // document.getElementById('company_followers').innerHTML = "9900";
+    // document.getElementById('company_title').innerHTML = "Barilla, Company";
+
+    document.getElementById('company_background').src = json['background'];
+    document.getElementById('company_image').src = json['image'];
+    document.getElementById('company_name').innerHTML = json['name'];
+    document.getElementById('company_description').innerHTML = json['description'];
+    document.getElementById('company_followers').innerHTML = json['followers'];
+    document.getElementById('company_title').innerHTML = json['indication'];
+
   }
 </script>
 
